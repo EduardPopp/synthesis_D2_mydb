@@ -50,15 +50,25 @@ int new_node(llist_t *list, csv *csv, int i);
 
 void print_movie_list(llist_t *movies);
 
-void gameloop(llist_t *pokemons, char **av);
-
-void sort_pokemon_by_name(llist_t *pokemon);
-
-int create_movie_database(llist_t *pokemons, csv *parsed_csv, \
-char *pokfolder);
+void sort_by_string(llist_t *movies);
 
 int check_arguments(int ac, char **av, llist_t *pokemons);
 
 char *uppercase_args(char *argument);
 
+void print_entry(char *field, char *str, llist_t *movies);
+
+void print_movies_by_id_number(char *field, int id_number, llist_t *movies);
+
+int parse_args(char **av, llist_t *movies, int i);
+
+void decide_command_source(llist_t *movies, char **av);
+
+void show_function_arg(char **av, llist_t *movies);
+
+void check_for_no_csv(csv *output);
+
+void check_commas(char *filepath);
+
+void check_field_validity(char *arg, llist_t *movies);
 #endif /* !HELPER_H_ */

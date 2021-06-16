@@ -41,13 +41,13 @@
 //     return 0;
 // }
 
-// void sort_pokemon_by_name(llist_t *pokemon)
+// void sort_by_string(llist_t *movies)
 // {
 //     llist_t *temp1;
 //     llist_t *temp2;
 
-//     for (int i = pokemon->size - 2; i >= 0; i--) {
-//         temp1 = pokemon->prev;
+//     for (int i = movies->size - 2; i >= 0; i--) {
+//         temp1 = movies->prev;
 //         temp2 = temp1->next;
 //         for (int j = 0; j <= i; j++) {
 //             if (strcmp(temp1->name, temp2->name) > 0)
