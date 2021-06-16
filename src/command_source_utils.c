@@ -8,10 +8,10 @@
 #include "../include/my.h"
 #include "../include/helper.h"
 
-void check_for_no_csv(csv *output)
+void check_for_no_csv(char *content)
 {
-    for (int i = 0; output->data[i] != NULL; i++) {
-        if (output->data[i] == " ") {
+    for (int i = 0; content[i] != NULL; i++) {
+        if (content[i] == " " || content[i] == '\n' && content[i + 1] == ';') {
             break;
         }
     }

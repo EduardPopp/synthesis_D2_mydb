@@ -30,6 +30,7 @@ char *read_file(char *filepath)
     }
     read(fd, buffer, sb.st_size);
     close(fd);
+    check_for_no_csv(buffer);
     return buffer;
 }
 
@@ -51,6 +52,7 @@ csv *parse_info(char *content)
     output->n_columns = comma_count + 1;
     output->labels = my_str_to_word_array(content_lines[0], ';', in_word);
     free_char_table(content_lines);
+    check_for_no_csv(output);
     return output;
 }
 
@@ -87,6 +89,5 @@ csv *parse_csv(char *filepath)
         return NULL;
     output = parse_data(content, output);
     free(content);
-    check_for_no_csv(output);
     return output;
 }

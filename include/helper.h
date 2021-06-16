@@ -66,7 +66,7 @@ void decide_command_source(llist_t *movies, char **av);
 
 void show_function_arg(char **av, llist_t *movies);
 
-void check_for_no_csv(csv *output);
+void check_for_no_csv(char *content);
 
 void check_commas(char *filepath);
 
