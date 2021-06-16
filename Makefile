@@ -5,22 +5,21 @@
 ## .
 ##
 
-SRC	=	src/main.c \
-		src/create_monster_db.c	\
-		src/linked_list.c \
-		my_str_to_word_array.c \
-		csv_parser.c \
-		free_everything.c \
-		src/print_pokemons.c \
-		src/gameloop.c	\
-		src/gameloop_utils.c	\
+SRC	=	src/main.c	\
+		src/csv_parser.c	\
+		src/linked_list.c	\
+		src/my_str_to_word_array.c	\
 		src/name_sort_pokemon.c	\
 		src/create_pokedex.c	\
-		src/error_check_pokedex.c
+		src/create_movie_db.c	\
+		src/free_everything.c	\
+		src/command_source.c	\
+		src/get_function.c	\
+		
 
 OBJ	=	$(SRC:.c=.o)
 
-NAME	=	pokemon
+NAME	=	mydb
 
 INC	=	-I include/
 
